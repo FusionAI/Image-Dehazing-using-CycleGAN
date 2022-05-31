@@ -34,6 +34,7 @@ Usually, GAN requires a dataset of paired examples to train an image-to-image tr
 In our project we have two different collections of data (Hazed image and Dehazed image). For this we develop an architecture of two GANs, and each GAN has a discriminator and a generator model, meaning there are four models ( Generator A2B, Generator B2A, Discriminator B and Discriminator A) in total in the architecture. To summarize,
 
 ●	GAN 1: Translates dehazed Images to hazed Images.
+
 ●	GAN 2: Translates hazed Images to dehazed Images.
  
  We can summarize the generator and discriminator models from GAN 1 as follows:
@@ -67,6 +68,24 @@ At first, we load the input images from both haze and dehaze folders, then the d
 ![image](https://user-images.githubusercontent.com/60288450/171125302-b5f57a0c-5a86-4264-8317-a29338f4abdf.png)
 
 ### Generator:
+![image](https://user-images.githubusercontent.com/60288450/171125943-94be932e-995a-497c-ae07-1329c3618126.png)
+
+The parameters of the model are updated using:
+
+●	Adversarial loss (L2 or mean squared error)
+
+●	Identity loss (L1 or mean absolute error)
+
+●	Forward cycle loss (L1 or mean absolute error)
+
+●	Backward cycle loss (L1 or mean absolute error)
+
+### Evaluation metrics:
+
+A haze removal algorithm’s performance can be evaluated on several factors, among them, two of the most frequently used factors are the PSNR and SSIM. Peak Signal to Noise Ratio (PSNR) measures the ability of the algorithm to remove noise from a noisy image.
+
+SSIM is also a full-reference evaluation method, which measures the similarity between the clean image and the image to be evaluated in terms of brightness, contrast, and structure. Two identical images will have a SSIM of 1.
+
 
 
 
