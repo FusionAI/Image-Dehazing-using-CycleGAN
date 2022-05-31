@@ -86,6 +86,12 @@ A haze removal algorithm’s performance can be evaluated on several factors, am
 
 SSIM is also a full-reference evaluation method, which measures the similarity between the clean image and the image to be evaluated in terms of brightness, contrast, and structure. Two identical images will have a SSIM of 1.
 
+### OUTPUT:
+
+![image](https://user-images.githubusercontent.com/60288450/171126934-e351aff1-ee0c-477b-aa61-3a77af380fee.png)
+![image](https://user-images.githubusercontent.com/60288450/171126984-bd1f031c-b040-4f41-9adc-0ad790187b0b.png)
 
 
+### Conclusion:
 
+The trained GAN was tested on the test dataset with 10 images. The average Peak Signal-to-Noise Ratio is 49.39523569512697 and Structural Similarity Index Measure is 0.8916414893280891. Our model works pretty well for dehazing the image without any loss in its spatial properties while removing the haze (noise), with just 107 training samples. 
