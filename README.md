@@ -56,9 +56,8 @@ Generator Model 2:
 – Output: Likelihood of image is a dehazed Image.
 
 
-Implementation of Cycle GAN for single image dehazing:
-
-At first, we load the input images from both haze and dehaze folders, then the data is preprocessed in the way all the images are of the same shape i.e. (255,256,3).
+### Implementation of Cycle GAN for single image dehazing:
+The the data is preprocessed in the way all the images are of the same shape i.e. (255,256,3).
 
 ### Input Image:
 
