@@ -24,7 +24,9 @@ GAN has various number of use cases in real life scenarios,
 
 ### CycleGAN:
 
-The CycleGAN is an extension of the GAN architecture that involves the simultaneous training of two generator models and two discriminator models. One generator takes images from the first domain (Hazed Images) as input and outputs images for the second domain (Dehazed Images), and the other generator takes images from the second domain (Dehazed Images) as input and generates images from the first domain (Hazed Images). Discriminator models are then used to determine how close the generated images are to the original image and update the generator models accordingly. Usually, GAN requires a dataset of paired examples to train an image-to-image translation model. It’s difficult to get pairwise datasets in real world datasets. In many cases such a dataset does not exist. To overcome this limitation, a technique is employed where we do not require pairwise images; instead, un-paired images can be used and the general characteristics are extracted from each collection and used in the image translation process. Unpaired image-to-image translation is successfully done by cycle GAN. CycleGAN is well known for its application of image-to-image translation in the absence of paired data. CycleGAN can dela with unpaired data which makes the model more flexible. CycleGAN is trained in an unsupervised manner as it uses un-paired images.
+The CycleGAN is an extension of the GAN architecture that involves the simultaneous training of two generator models and two discriminator models. One generator takes images from the first domain (Hazed Images) as input and outputs images for the second domain (Dehazed Images), and the other generator takes images from the second domain (Dehazed Images) as input and generates images from the first domain (Hazed Images). Discriminator models are then used to determine how close the generated images are to the original image and update the generator models accordingly. 
+
+Usually, GAN requires a dataset of paired examples to train an image-to-image translation model. It’s difficult to get pairwise datasets in real world datasets. In many cases such a dataset does not exist. Unpaired image-to-image translation is successfully done by cycle GAN. CycleGAN is well known for its application of image-to-image translation in the absence of paired data. 
 
 ![image](https://user-images.githubusercontent.com/60288450/171110966-33da85b9-400f-47a3-8c71-71b1b6ed17d9.png)
 
@@ -60,5 +62,11 @@ At first, we load the input images from both haze and dehaze folders, then the d
 ### Input Image:
 
 ![image](https://user-images.githubusercontent.com/60288450/171112829-29c92cac-5dd7-45e2-9373-414e3e89f8c7.png)
+
+### Discriminator:
+![image](https://user-images.githubusercontent.com/60288450/171125302-b5f57a0c-5a86-4264-8317-a29338f4abdf.png)
+
+### Generator:
+
 
 
