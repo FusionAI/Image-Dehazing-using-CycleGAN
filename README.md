@@ -59,4 +59,6 @@ At first, we load the input images from both haze and dehaze folders, then the d
 
 ### Input Image:
 
+![image](https://user-images.githubusercontent.com/60288450/171112829-29c92cac-5dd7-45e2-9373-414e3e89f8c7.png)
+
 
