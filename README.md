@@ -26,4 +26,37 @@ GAN has various number of use cases in real life scenarios,
 
 The CycleGAN is an extension of the GAN architecture that involves the simultaneous training of two generator models and two discriminator models. One generator takes images from the first domain (Hazed Images) as input and outputs images for the second domain (Dehazed Images), and the other generator takes images from the second domain (Dehazed Images) as input and generates images from the first domain (Hazed Images). Discriminator models are then used to determine how close the generated images are to the original image and update the generator models accordingly. Usually, GAN requires a dataset of paired examples to train an image-to-image translation model. It’s difficult to get pairwise datasets in real world datasets. In many cases such a dataset does not exist. To overcome this limitation, a technique is employed where we do not require pairwise images; instead, un-paired images can be used and the general characteristics are extracted from each collection and used in the image translation process. Unpaired image-to-image translation is successfully done by cycle GAN. CycleGAN is well known for its application of image-to-image translation in the absence of paired data. CycleGAN can dela with unpaired data which makes the model more flexible. CycleGAN is trained in an unsupervised manner as it uses un-paired images.
 
+![image](https://user-images.githubusercontent.com/60288450/171110966-33da85b9-400f-47a3-8c71-71b1b6ed17d9.png)
+
+
+In our project we have two different collections of data (Hazed image and Dehazed image). For this we develop an architecture of two GANs, and each GAN has a discriminator and a generator model, meaning there are four models ( Generator A2B, Generator B2A, Discriminator B and Discriminator A) in total in the architecture. To summarize,
+
+●	GAN 1: Translates dehazed Images to hazed Images.
+●	GAN 2: Translates hazed Images to dehazed Images.
+ 
+ We can summarize the generator and discriminator models from GAN 1 as follows:
+
+Generator Model 1:
+– Input: dehazed Images.
+– Output: Generated hazed Images.
+Discriminator Model 1:
+– Input: hazed Images and output from Generator Model 1.
+– Output: Likelihood of image is a hazed Image.
+
+Similarly, we can summarize the generator and discriminator models from GAN 2 as follows:
+
+Generator Model 2:
+– Input: hazed Images.
+– Output: Generated hazed Images.
+ Discriminator Model 2:
+– Input: dehazed Images and output from Generator Model 2.
+– Output: Likelihood of image is a dehazed Image.
+
+
+Implementation of Cycle GAN for single image dehazing:
+
+At first, we load the input images from both haze and dehaze folders, then the data is preprocessed in the way all the images are of the same shape i.e. (255,256,3).
+
+### Input Image:
+
 
