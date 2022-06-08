@@ -88,13 +88,13 @@ The the data is preprocessed in the way all the images are of the same shape i.e
 
 ![image](https://user-images.githubusercontent.com/60288450/171112829-29c92cac-5dd7-45e2-9373-414e3e89f8c7.png)
 
-### Discriminator:
-
-![image](https://user-images.githubusercontent.com/60288450/171125302-b5f57a0c-5a86-4264-8317-a29338f4abdf.png)
-
 ### Generator:
 
 ![image](https://user-images.githubusercontent.com/60288450/171125943-94be932e-995a-497c-ae07-1329c3618126.png)
+
+### Discriminator:
+
+![image](https://user-images.githubusercontent.com/60288450/171125302-b5f57a0c-5a86-4264-8317-a29338f4abdf.png)
 
 The parameters of the model are updated using:
 
