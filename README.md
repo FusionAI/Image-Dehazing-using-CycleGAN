@@ -82,7 +82,7 @@ Similarly, we can summarize the generator and discriminator models from GAN 2 as
 
 ### Implementation of Cycle GAN for single image dehazing:
 
-The the data is preprocessed in the way all the images are of the same shape i.e. (255,256,3).
+The the data is preprocessed in the way all the images are of the same shape i.e. (256,256,3).
 
 ### Input Image:
 
